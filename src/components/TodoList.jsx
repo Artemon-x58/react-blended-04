@@ -1,10 +1,10 @@
 import { useSelector } from 'react-redux';
 import { Grid, GridItem } from './Grid/Grid.styled';
 import { Todo } from './Todo/Todo';
-import { selectTodos } from 'redux/selector';
+import { selectFilteredTodos } from 'redux/selector';
 
 export const TodoList = () => {
-  const todos = useSelector(selectTodos);
+  const todos = useSelector(selectFilteredTodos);
   return (
     <Grid>
       {todos.map((todo, index) => (
